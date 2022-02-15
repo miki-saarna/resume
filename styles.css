@@ -26,13 +26,12 @@ body {
 
 /* comment out when finished. This is used to track margins */
 .document > div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 hr {
-    height: 2px;
     border: none;
-    background-color: #444444;
+    border-top: thin solid #444444;
     margin: 5px 0;
 }
 
@@ -62,24 +61,34 @@ p, li {
     font-size: 10px;
 }
 
+li {
+    list-style-image: url(/images/right-arrow.svg); 
+    /* creates beginning padding */
+    padding-inline-start: 1px;
+}
+
+ul {
+    padding-left: 24px;
+}
+
 .heading {
     margin-bottom: 10px;
 }
 
-.contact-info div:first-of-type, .contact-info > div:last-of-type {
+.contact-info {
     display: flex;
-    /* justify-content: space-between; */
-    font-size: 11px;
 }
 
-.contact-info > div > p:nth-of-type(1) {
-    flex: 2;
-}
-.contact-info > div > p:nth-of-type(2), .contact-info > div > p:nth-of-type(3) {
-    flex: 3;
+.contact-info ul {
+    flex: 1;
+    padding-left: 0;
 }
 
-.contact-info > div:first-of-type > p::before, .contact-info > div:last-of-type > p::before {
+.contact-info li {
+    list-style: none;
+}
+
+.contact-info li::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -91,22 +100,22 @@ p, li {
     margin-right: 4px;
 }
 
-.contact-info > div:first-of-type > p:nth-of-type(1)::before {
-  content: '\f3c5'
+.contact-info > ul:first-of-type > li:nth-of-type(1)::before {
+  /* content: '\f3c5' */
 }
-.contact-info > div:first-of-type > p:nth-of-type(2)::before {
-  content: '\f879'
+.contact-info > ul:first-of-type > li:nth-of-type(2)::before {
+  /* content: '\f879' */
 }
-.contact-info > div:first-of-type > p:nth-of-type(3)::before {
-  content: '\f0e0'
+.contact-info > ul:first-of-type > li:nth-of-type(3)::before {
+  /* content: '\f0e0' */
 }
-.contact-info > div:last-of-type > p:nth-of-type(1)::before {
+.contact-info > ul:last-of-type > li:nth-of-type(1)::before {
   content: '\f015'
 }
-.contact-info > div:last-of-type > p:nth-of-type(2)::before {
+.contact-info > ul:last-of-type > li:nth-of-type(2)::before {
   content: '\f08c'
 }
-.contact-info > div:last-of-type > p:nth-of-type(3)::before {
+.contact-info > ul:last-of-type > li:nth-of-type(3)::before {
   content: '\f09b'
 }
 
@@ -121,26 +130,24 @@ p, li {
 .skills > div > div {
     flex: 1;
 }
+
+/* play around with below padding numbers to obtain ideal padding */
 .skills > div > div:nth-of-type(1) {
-    padding: 0 5px 0 0;
+    padding: 0 0 0 0;
 }
 
 .skills > div > div:nth-of-type(2) {
-    padding: 0 5px;
+    padding: 0 0 0 10px;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
 .skills > div > div:nth-of-type(3) {
-    padding: 0 0 0 5px;
+    padding: 0 0 0 10px;
 }
 
-.skills > div > div > p {
-    font-size: 12px;
-}
-
-.projects {
-
+.skills > div > div > h4 {
+    margin-bottom: 5px;
 }
 
 .project-title, .job-title {
@@ -148,7 +155,7 @@ p, li {
     align-items: flex-end;
 }
 
-.project-title, .job-title h3:last-of-type {
+.project-title h3:last-of-type, .job-title h3:last-of-type {
     font-weight: normal;
     margin: 0 3px;
 }

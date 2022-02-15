@@ -36,13 +36,12 @@ body {
 }
 
 section {
-    margin: 8px 0;
+    margin: 12px 0;
 }
 
 hr {
     border: none;
-    border-top: thin solid #444444;
-    margin: 2px 0 5px;
+    border-top: thin solid #999999;
 }
 
 h1, h2 {
@@ -53,7 +52,7 @@ h1, h2 {
 h1 {
     font-size: 26px;
     color: rgb(43, 118, 231);
-    line-height: 22px;
+    line-height: 25px;
 }
 
 h2 {
@@ -72,6 +71,15 @@ h4 {
     font-family: Helvetica;
     font-weight: normal;
     font-size: 12px;
+}
+
+h5 {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.description {
+    /* text-align: center; */
 }
 
 p, li {
@@ -94,6 +102,10 @@ ul {
     padding-left: 24px;
 }
 
+.lighter {
+    font-weight: 300;
+}
+
 .heading {
     margin-top: 0;
     margin-bottom: 10px;
@@ -105,6 +117,7 @@ ul {
 
 .contact-info {
     display: flex;
+    margin: 5px 0;
 }
 
 .contact-info ul {
@@ -206,9 +219,13 @@ ul {
 .project-title p, .job-title p, .education-title p {
     font-weight: 400;
     color: #444444;
+    font-size: 11px;
 }
 
-.experience p, .education p {
+.experience > p, .education > p {
     font-weight: 400;
-    color: #444444;
+}
+
+.education {
+    margin-bottom: 0;
 }

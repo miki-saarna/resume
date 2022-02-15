@@ -24,8 +24,13 @@ body {
     padding: 54px;
 }
 
+/* comment out when finished. This is used to track margins */
+.document > div {
+    border: 1px solid red;
+}
+
 hr {
-    height: 3px;
+    height: 2px;
     border: none;
     background-color: #444444;
     margin: 5px 0;
@@ -34,6 +39,7 @@ hr {
 h1 {
     font-size: 34px;
     color: rgb(43, 118, 231);
+    line-height: 27px;
 }
 
 h2 {
@@ -53,9 +59,12 @@ h4 {
 }
 
 p, li {
-    font-size: 12px;
+    font-size: 10px;
 }
 
+.heading {
+    margin-bottom: 10px;
+}
 
 .contact-info div:first-of-type, .contact-info > div:last-of-type {
     display: flex;
@@ -134,12 +143,12 @@ p, li {
 
 }
 
-.project-title {
+.project-title, .job-title {
     display: flex;
     align-items: flex-end;
 }
 
-.project-title > h3:last-of-type {
+.project-title, .job-title h3:last-of-type {
     font-weight: normal;
     margin: 0 3px;
 }

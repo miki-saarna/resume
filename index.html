@@ -6,98 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Mikito Saarna - Resume</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
-    <div class='document'>
-        <div>
-        <section class='heading'>
-            <h1>Mikito Saarna</h1>
-            <h4>Full Stack Software Engineer</h4>
-        </section>
-        <!-- <section class='description'>
-            <h5>Passionate about creating intuitively designed applications that enrich our lives</h5>
-        </section> -->
-        <hr />
-        <section class='contact-info'>
-            <ul>
-                <li><img src='/images/location.svg' width='10.25px' height='9px' />Tampa, FL</li>
-                <li><img src='/images/phone.svg' width='10.25px' height='9px' />720-295-7484</li>
-                <li><img src='/images/email.svg' width='10.25px' height='9px' />mikitosaarna@gmail.com</li>
-            </ul>
-            <ul>
-                <li><img src='/images/house-2.svg' width='10.25px' height='9px' />MikiSaarna.com</li>
-                <li><img src='/images/linkedin-4.svg' width='10.25px' height='9px' />linkedin.com/in/mikito-saarna</li>
-                <li><img src='/images/github-2.svg' width='10.25px' height='9px' />github.com/miki-saarna</li>
-            </ul>
-        </section>
-        <hr />
-        <section class='skills'>
-            <h2>TECHNICAL SKILLS</h2>
-            <!-- <hr /> -->
-            <div>
+    <div class='document' id='document'>
+        <div class='document-space'>
+            <section class='heading'>
+                <h1>Mikito Saarna</h1>
+                <h4>Full Stack Software Engineer</h4>
+            </section>
+            <!-- <section class='description'>
+                <h5>Passionate about creating intuitively designed applications that enrich our lives</h5>
+            </section> -->
+            <hr />
+            <section class='contact-info'>
+                <ul>
+                    <li><img src='/images/location.svg' width='10.25px' height='9px' />Tampa, FL</li>
+                    <li><img src='/images/phone.svg' width='10.25px' height='9px' />720-295-7484</li>
+                    <li><img src='/images/email.svg' width='10.25px' height='9px' />mikitosaarna@gmail.com</li>
+                </ul>
+                <ul>
+                    <li><a href='https://www.mikisaarna.com' target='_blank'><img src='/images/house-2.svg' width='10.25px' height='9px' />MikiSaarna.com</a></li>
+                    <li><a href='https://www.linkedin.com/in/mikito-saarna' target='_blank'><img src='/images/linkedin-4.svg' width='10.25px' height='9px' />linkedin.com/in/mikito-saarna</a></li>
+                    <li><a href='https://github.com/miki-saarna' target='_blank'><img src='/images/github-2.svg' width='10.25px' height='9px' />github.com/miki-saarna</a></li>
+                </ul>
+            </section>
+            <hr />
+            <section class='skills'>
+                <h2>TECHNICAL SKILLS</h2>
+                <!-- <hr /> -->
                 <div>
-                    <h4><b>Languages:</b></h4>
-                    <p>JavaScript(ES6), TypeScript, PostreSQL, MongoDB, HTML, CSS</p>
+                    <div>
+                        <h4><b>Languages:</b></h4>
+                        <p>JavaScript(ES6), TypeScript, PostreSQL, MongoDB, HTML, CSS</p>
+                    </div>
+                    <div>
+                        <h4><b>Libraries/Frameworks:</b></h4>
+                        <p>Node.js, React, jQuery, Express, Knex, Bootstrap, Liquid (Shopify)</p>
+                    </div>
+                    <div>
+                        <h4><b>Tools:</b></h4>
+                        <p>VSCode, Git, GitHub, Docker, Vercel, Heroku, Mocha, Chai</p>
+                    </div>
+                </div>
+            </section>
+            <section class='projects'>
+                <h2>PROJECTS</h2>
+                <!-- <hr /> -->
+                <div>
+                    <div class='project-title'><h3>Restaurant Reservation App</h3><h3>|</h3><a href='https://restaurant-reservation-application.vercel.app/dashboard' target='_blank'>Project Link</a></div>
+                    <ul>
+                        <li>Developed an efficient reservation creation and seating application for restaurant personnel</li>
+                        <li>Includes multiple pages incorporating fluid API calls with CRUD operation architecture</li>
+                        <li>Back-end built with Node, Express, PostgreSQL, Knex; front-end built with Node, React, CSS</li>
+                    </ul>
                 </div>
                 <div>
-                    <h4><b>Libraries/Frameworks:</b></h4>
-                    <p>Node.js, React, jQuery, Express, Knex, Bootstrap, Liquid (Shopify)</p>
+                    <div class='project-title'><h3>Portfolio Website</h3><h3>|</h3><a href='https://www.mikisaarna.com' target='_blank'>Project Link</a></div>
+                    <ul>
+                        <li>Full-stack website displaying my programming knowledge/skills through a creative user experience</li>
+                        <li>Incorporates complex mathematical operations, parallax effect, API calls, and more</li>
+                        <li>Back-end built with Node, Express, MongoDB; front-end built with Node, React, TypeScript, CSS</li>
+                    </ul>
                 </div>
                 <div>
-                    <h4><b>Tools:</b></h4>
-                    <p>VSCode, Git, GitHub, Docker, Vercel, Heroku, Mocha, Chai</p>
+                    <div class='project-title'><h3>Recent Transactions App</h3><h3>|</h3><a href='https://acc-balance-and-transactions-application.vercel.app' target='_blank'>Project Link</a></div>
+                    <ul>
+                        <li>Developed an application that displays real-time transactions from the last 30 days</li>
+                        <li>Utilizes Plaid Quickstart and Plaid’s other API endpoints for safe and secure access to banking information</li>
+                        <li>Back-end built with Node, Express, MongoDB; front-end built with Node, React, TypeScript, CSS</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-        <section class='projects'>
-            <h2>PROJECTS</h2>
-            <!-- <hr /> -->
-            <div>
-                <div class='project-title'><h3>Restaurant Reservation App</h3><h3>|</h3><p>Project Link</p></div>
+            </section>
+            <section class='experience'>
+                <h2>EXPERIENCE</h2>
+                <!-- <hr /> -->
+                <div class='job-title'><h3>Amazon Seller Account Manager</h3><h3>|</h3><p>Simply by Papo</p></div>
+                <p>Feb 2021 - Present <span class='lighter'>// Remote</span></p>
                 <ul>
-                    <li>Developed an efficient reservation creation and seating application for restaurant personnel</li>
-                    <li>Includes multiple pages incorporating fluid API calls with CRUD operation architecture</li>
-                    <li>Back-end built with Node, Express, PostgreSQL, Knex; front-end built with Node, React, CSS</li>
+                    <li>Responsible for inventory management, product listing creation/optimization, product launches, ad creation and management, customer service, troubleshooting, and more</li>
+                    <li>Increased monthly revenue by 5x since taking over the account by successfully executing responsibilities listed above and reevaluating advertising strategy based on utilizing split A/B testing experimentation</li>
                 </ul>
-            </div>
-            <div>
-                <div class='project-title'><h3>Portfolio Website</h3><h3>|</h3><p>Project Link</p></div>
+            </section>
+            <section class='education'>
+                <h2>EDUCATION</h2>
+                <!-- <hr /> -->
+                <div class='education-title'><h3>Software Engineering Flex</h3><h3>|</h3><p>Thinkful</p></div>
+                <p>Jan 2022 <span class='lighter'>// Remote</span></p>
                 <ul>
-                    <li>Full-stack website displaying my programming knowledge/skills through a creative user experience</li>
-                    <li>Incorporates complex mathematical operations, parallax effect, API calls, and more</li>
-                    <li>Back-end built with Node, Express, MongoDB; front-end built with Node, React, TypeScript, CSS</li>
+                    <li>Learned relevant industry knowledge of full-stack software engineering with an emphasis on JavaScript, Node.js, React and Express.js, Knex.js, and PostgreSQL, test-driven development, HTML, CSS, and more</li>
+                    <li>Developed and deployed multiple full-stack applications with newly learned knowledge of languages and frameworks and resourcefulness to research proper implementation of code</li>
                 </ul>
-            </div>
-            <div>
-                <div class='project-title'><h3>Account Balance and Transactions App</h3><h3>|</h3><p>Project Link</p></div>
-                <ul>
-                    <li>Developed an application that displays real-time account balances and transactions</li>
-                    <li>Utilizes Plaid Quickstart and Plaid’s other API endpoints for safe and secure access to banking information</li>
-                    <li>Back-end built with Node, Express, MongoDB; front-end built with Node, React, TypeScript, CSS</li>
-                </ul>
-            </div>
-        </section>
-        <section class='experience'>
-            <h2>RELEVANT EXPERIENCE</h2>
-            <!-- <hr /> -->
-            <div class='job-title'><h3>Amazon Seller Account Manager</h3><h3>|</h3><p>Simply by Papo</p></div>
-            <p>Feb 2021 - Present <span class='lighter'>// Remote</span></p>
-            <ul>
-                <li>Responsible for inventory management, product listing creation/optimization, product launches, ad creation and management, customer service, troubleshooting, and more</li>
-                <li>Increased monthly revenue by 5x since taking over the account by successfully executing responsibilities listed above and reevaluating advertising strategy based on utilizing split A/B testing experimentation</li>
-            </ul>
-        </section>
-        <section class='education'>
-            <h2>EDUCATION</h2>
-            <!-- <hr /> -->
-            <div class='education-title'><h3>Software Engineering Flex</h3><h3>|</h3><p>Thinkful</p></div>
-            <p>Jan 2022 <span class='lighter'>// Remote</span></p>
-            <ul>
-                <li>Learned relevant industry knowledge of full-stack software engineering with an emphasis on JavaScript, Node.js, React and Express.js, Knex.js, and PostgreSQL, test-driven development, HTML, CSS, and more</li>
-                <li>Developed and deployed multiple full-stack applications with newly learned knowledge of languages and frameworks and resourcefulness to research proper implementation of code</li>
-            </ul>
-        </section>
+            </section>
+        </div>
     </div>
-    </div>
+
+    <!-- <button id="downloadBtn">Download Resume</button> -->
+
+    
+
+    <script src='script.js'></script>
 </body>
 </html>
